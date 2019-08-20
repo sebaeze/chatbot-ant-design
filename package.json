@@ -39,7 +39,7 @@
     "webpack": "^4.30.0"
   },
   "scripts": {
-    "build": "webpack  --mode development --config webpack.react.prod.js",
+    "build": "webpack  --mode production --config webpack.react.prod.js",
     "startProd":"export AMBIENTE=produccion && node ./server/server.js",
     "start": "node ./server/server.js",
     "start:react": "webpack-dev-server --config webpack.react.dev.js"
