@@ -12,6 +12,7 @@ const dbClass          = require('./db/dbIndex').bases ;
 const utiles           = require('./lib/utiles').Utilitarios() ;
 const configuracionApp = utiles.parseArchivoJson2Js( path.join(__dirname,'/config/general.json') ) ;
 //
+console.dir(process.env) ;
 if ( !process.env.AMBIENTE ){ process.env.AMBIENTE="dev"; }
 //
 if ( process.env.GLOBAL_GOOGLE_ANALYTICS ){
