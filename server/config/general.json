@@ -1,0 +1,24 @@
+{
+    "nombre":"eChatbot | Asistente Virtual en entrenamiento",
+    "descripcion":"eChatbot es un asistente virtual en entrenamiento para satisfascer sus necesidades",
+    "urlEmpresa":"https://www.echatbot.com.ar",
+    "email":{
+        "emailEmpresa":"sebaeze@gmail.com",
+        "emailSoporte":"sebaeze@gmail.com",
+        "emailGateway":"echatbotbackend@gmail.com",
+        "passwordEmailGateway":"qaz11qaz",
+        "nombreMuestraEmailGateway":"eChatbot"
+    },
+    "database":{
+        "dev":{
+            "type":"mongodb",
+            "url":"mongodb://localhost:27017",
+            "database":"echatbot"
+        },
+        "produccion":{
+            "type":"mongodb",
+            "url":"mongodb://sebaeze:qaz11qaz@66.97.39.81:20017",
+            "database":"echatbot"
+        }
+    }
+}

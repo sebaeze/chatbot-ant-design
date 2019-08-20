@@ -1,0 +1,21 @@
+/*
+*
+*/
+.rcw-message > .rcw-response {
+    background-color: black !important;
+    color: white !important;
+}
+
+/*
+.rcw-widget-container{
+    bottom: 30% ;
+}
+.rcw-launcher {
+    width: 150px !important ;
+    height: auto !important ;
+}
+.rcw-launcher .rcw-open-launcher {
+    width: 150px !important ;
+    height: auto !important ;
+}
+*/
