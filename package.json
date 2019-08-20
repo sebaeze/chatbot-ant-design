@@ -40,7 +40,7 @@
   },
   "scripts": {
     "build": "webpack  --mode development --config webpack.react.prod.js",
-    "startProd":"AMBIENTE=produccion && node ./server/server.js",
+    "startProd":"export AMBIENTE=produccion && node ./server/server.js",
     "start": "node ./server/server.js",
     "start:react": "webpack-dev-server --config webpack.react.dev.js"
   },
