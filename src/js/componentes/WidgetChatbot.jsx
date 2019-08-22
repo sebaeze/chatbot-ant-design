@@ -31,7 +31,9 @@ class WidgetChatbot extends Component {
     /*
     *   __URL_BACKEND__: Es generada por webpack en momento del Build
     */
-    fetch( __URL_BACKEND__+'/chatbot/mensaje?idAgente='+this.props.idAgente ,postOpt)
+    let tempUrlBackend = __URL_BACKEND__+'/chatbot/mensaje?idAgente='+this.props.idAgente ;
+    console.log('...tempUrlBackend: '+tempUrlBackend+';') ;
+    fetch( tempUrlBackend ,postOpt)
             .then(function(response){
                 if (response.status>=200 & response.status<=400) {
                     return response.json() ;
