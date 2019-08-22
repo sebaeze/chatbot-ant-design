@@ -8,10 +8,10 @@ const router            = require('express').Router()   ;
 let opciones = {
   dotfiles: 'ignore',etag: false,extensions: [],index: false,maxAge: '1d' ,redirect: false,
   setHeaders: function (res, path, stat) {
-      res.set('Access-Control-Allow-Origin', '*');
-      res.set("Access-Control-Allow-Headers", "*')");
-      res.set('Access-Control-Allow-Methods', '*');
-      res.set("Access-Control-Allow-Credentials", true);
+      res.set('Access-Control-Allow-Origin'     , '*'  );
+      res.set("Access-Control-Allow-Headers"    , '*'  ) ;
+      res.set('Access-Control-Allow-Methods'    , '*'  );
+      res.set("Access-Control-Allow-Credentials", true );
       res.set('Connection', 'Keep-Alive') ;
       }
   } ;
