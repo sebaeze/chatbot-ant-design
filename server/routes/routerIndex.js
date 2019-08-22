@@ -9,9 +9,9 @@ let opciones = {
   dotfiles: 'ignore',etag: false,extensions: [],index: false,maxAge: '1d' ,redirect: false,
   setHeaders: function (res, path, stat) {
       res.set('Access-Control-Allow-Origin'     , '*'  );
-      res.set("Access-Control-Allow-Headers"    , '*'  ) ;
       res.set('Access-Control-Allow-Methods'    , '*'  );
       res.set("Access-Control-Allow-Credentials", true );
+      res.set("Access-Control-Allow-Headers"    , '"X-PINGOTHER, Content-Type'  ) ;
       res.set('Connection', 'Keep-Alive') ;
       }
   } ;
@@ -25,6 +25,7 @@ module.exports = (argConfig,argDb) => {
   router.get('/', function(req, res) {
     res.set('access-Control-Allow-Origin', '*');
     res.set('access-Control-Allow-Methods', '*');
+    res.set("Access-Control-Allow-Headers","X-PINGOTHER, Content-Type" ) ;
     res.setHeader("Access-Control-Allow-Credentials", true);
     //
     res.type('.js');

@@ -103,7 +103,8 @@ module.exports = (argConfig,argDb) => {
         //
         res.set('access-Control-Allow-Origin'  , '*');
         res.set('access-Control-Allow-Methods' , '*');
-        res.set("Access-Control-Allow-Headers" , 'content-type'  ) ;
+        //res.set("Access-Control-Allow-Headers" , 'content-type'  ) ;
+        res.set("Access-Control-Allow-Headers","X-PINGOTHER, Content-Type" ) ;
         res.setHeader("Access-Control-Allow-Credentials", true);
         //
         chatbotAsistente.get( req.query.idAgente )
