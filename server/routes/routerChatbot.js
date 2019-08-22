@@ -81,11 +81,12 @@ module.exports = (argConfig,argDb) => {
     //
     const chatbotAsistente = asistente(argDb) ;
     //
-    res.set('access-Control-Allow-Origin', '*');
-    res.set('access-Control-Allow-Methods', '*');
-    res.setHeader("Access-Control-Allow-Credentials", true);
-    //
     router.get('/session',function (req, res) {
+        //
+        res.set('access-Control-Allow-Origin', '*');
+        res.set('access-Control-Allow-Methods', '*');
+        res.setHeader("Access-Control-Allow-Credentials", true);
+        //
         assistant.createSession({
           assistant_id: process.env.ASSISTANT_ID || myAssistantId ,
         }, function (error, response) {
