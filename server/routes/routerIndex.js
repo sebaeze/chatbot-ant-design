@@ -7,12 +7,15 @@ const router            = require('express').Router()   ;
 //
 let opciones = {
   dotfiles: 'ignore',etag: false,extensions: [],index: false,maxAge: '1d' ,redirect: false,
-  setHeaders: function (res, path, stat) {
+  setHeaders: function (res, argPath, argStat) {
       res.set('Access-Control-Allow-Origin'     , '*'  );
-      res.set('Access-Control-Allow-Methods'    , '*'  );
       res.set("Access-Control-Allow-Credentials", true );
-      res.set("Access-Control-Allow-Headers"    , '"X-PINGOTHER, Content-Type'  ) ;
+      res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
+      res.header("Access-Control-Allow-Headers", "X-Requested-With");
+      res.header('Access-Control-Allow-Headers', 'Content-Type');
       res.set('Connection', 'Keep-Alive') ;
+      console.dir(argPath) ;
+      console.dir(argStat) ;
       }
   } ;
 /*
