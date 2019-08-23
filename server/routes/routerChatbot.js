@@ -98,13 +98,25 @@ module.exports = (argConfig,argDb) => {
         }) ;
     }) ;
     //
+    router.all('/mensaje', function(req,res,next){
+        /*
+        *  Este paso funciona para que la comunicacion entre front -> backend no falle por error de CORS
+        */
+        res.set('access-Control-Allow-Origin'  , '*');
+        res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
+        res.header('Access-Control-Allow-Headers', 'content-type');
+        res.setHeader("Access-Control-Allow-Credentials", true);
+        //
+        next() ;
+        //
+      }) ;
+    //
     router.post('/mensaje', function(req,res){
       try {
         //
         res.set('access-Control-Allow-Origin'  , '*');
         res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
-        res.header("Access-Control-Allow-Headers", "X-Requested-With");
-        res.header('Access-Control-Allow-Headers', 'Content-Type');
+        res.header('Access-Control-Allow-Headers', 'content-type');
         res.setHeader("Access-Control-Allow-Credentials", true);
         //
         chatbotAsistente.get( req.query.idAgente )
