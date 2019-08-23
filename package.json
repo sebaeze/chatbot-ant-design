@@ -40,6 +40,7 @@
   },
   "scripts": {
     "build": "webpack  --mode production --config webpack.react.prod.js",
+    "buildProd":"export AMBIENTE=produccion && export URL_BACKEND=http://66.97.39.81:3001 && webpack  --mode production --config webpack.react.prod.js",
     "startProd":"export AMBIENTE=produccion && export URL_BACKEND=http://66.97.39.81:3001 && node ./server/server.js",
     "start": "node ./server/server.js",
     "start:react": "webpack-dev-server --config webpack.react.dev.js"
