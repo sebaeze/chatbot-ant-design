@@ -23,6 +23,7 @@ const assistant = new AssistantV2 ({
     disable_ssl_verification: true
 });
 //
+/*
 assistant.listWorkspaces()
   .then(res => {
     console.dir( res  );
@@ -32,6 +33,7 @@ assistant.listWorkspaces()
   .catch(err => {
     console.log(err)
   });
+  */
 //
 //hanler to start a new session
 assistant.startNewSession = function (req, res, next) {
